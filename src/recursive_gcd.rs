@@ -10,7 +10,10 @@ pub fn exec() {
         n: u16,
     }
 
+    let start = Instant::now();
     println!("gcd({}, {}) = {}", m, n, gcd(m, n))
+    let duration = start.elapsed();
+    println!("elapsed time: {:#?}", duration);
 
 }
 
