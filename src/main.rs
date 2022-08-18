@@ -1,3 +1,6 @@
+
+mod exhaustive_search;
+
 fn main() {
-    println!("Hello, world!");
+    exhaustive_search::exhaustive_search();
 }
