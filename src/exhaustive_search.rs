@@ -47,7 +47,7 @@ pub fn exhaustive_search() {
 
     let duration = start.elapsed();
 
-    println!("existance: {}, id: {}", v, exist, found_id);
+    println!("existance: {}, id: {}", exist, found_id);
     println!("elapsed time: {:#?}", duration);
 
 }
