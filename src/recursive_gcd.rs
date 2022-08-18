@@ -11,7 +11,7 @@ pub fn exec() {
     }
 
     let start = Instant::now();
-    println!("gcd({}, {}) = {}", m, n, gcd(m, n))
+    println!("gcd({}, {}) = {}", m, n, gcd(m, n));
     let duration = start.elapsed();
     println!("elapsed time: {:#?}", duration);
 
@@ -25,7 +25,7 @@ pub fn gcd(m: u16, n: u16) -> u16 {
     if n==0 {
         return m;
     } else {
-        return gcd(n, m%n)
+        return gcd(n, m%n);
     }
 
 }
