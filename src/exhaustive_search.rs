@@ -1,5 +1,6 @@
 
-use std::io;
+// use std::io;
+use proconio::input;
 use std::time::{Duration, Instant};
 use rand::{thread_rng, Rng};
 
@@ -10,13 +11,18 @@ pub fn exhaustive_search() {
     
     // 検索する値
     println!("Input the number (0~255).");
-    let mut v = String::new();
-    io::stdin()
-        .read_line(&mut v)
-        .expect("Failed to read line.");
-    let v: u8 = v.trim()
-        .parse()
-        .expect("Please type a number!");
+    input! {
+        v: u8,
+    }
+
+    // (メモ)std::ioを用いる場合
+    // let mut v = String::new();
+    // io::stdin()
+    //     .read_line(&mut v)
+    //     .expect("Failed to read line.");
+    // let v: u8 = v.trim()
+    //     .parse()
+    //     .expect("Please type a number!");
 
     // 乱数配列の長さ
     const N: u8 = 100;
