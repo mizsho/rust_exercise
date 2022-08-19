@@ -1,10 +1,12 @@
 
 mod exhaustive_search;
-mod recursive_gcd;
+mod gcd;
+mod fibonacci;
 
 fn main() {
 
     // exhaustive_search::exhaustive_search();
-    recursive_gcd::exec();
+    // gcd::exec();
+    fibonacci::exec();
 
 }
