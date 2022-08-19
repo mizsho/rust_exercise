@@ -10,10 +10,10 @@ pub fn exec() {
     // solve frog problem.
     // arr: height array for stages. 
 
-    // initialize array with random numbers.
+    // initialize array with random numbers. (1~100)
     let mut arr = vec![0i32; N];
     for i in 0..N {
-        arr[i] = rand::thread_rng().gen_range(1..=127);
+        arr[i] = rand::thread_rng().gen_range(1..=100);
     }
     println!("random array: {:?}", arr);
 
