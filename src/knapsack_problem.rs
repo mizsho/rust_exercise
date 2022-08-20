@@ -24,9 +24,9 @@ pub fn exec() {
     println!("weight array: {:?}", arr_w);
     println!("value array: {:?}", arr_v);
 
-    // dp[i][w]: the max of total value under
-    //     - total weight <= w
-    //     - pick first i items    
+    // dp[i][w]: the max of total value under under the condition:
+    //  - total weight <= w
+    //  - pick first i items
     let mut dp = vec![
         vec![0usize; WMAX+1];
         N+1
