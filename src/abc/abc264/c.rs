@@ -23,6 +23,7 @@ fn main() {
 
             // println!("i:{}, j:{}", i, j);
 
+            // 行列aからi,jで指定した行,列を残した行列
             let mut vec_all = vec![];
             for i2 in 0..h1 {
             
@@ -31,7 +32,9 @@ fn main() {
                 // &は, bitwise andを表す.
                 if 1 & (i >> i2) == 0 { continue; }
 
+                // jで指定される行ベクトル
                 let mut vec_h = vec![];
+                
                 for j2 in 0..w1 {
                     // jの右からj2番目のbitが1であるか.
                     if 1 & (j >> j2) == 1 {
@@ -42,9 +45,12 @@ fn main() {
                 vec_all.push(vec_h);
             }
 
+            // すべての要素が一致しているか一括確認可能.
+            // vecとarrayの直接比較は可能.
             if vec_all == b {
                 ans = "Yes";
             }
+
             // println!("a{:?}", vec_all);
             // println!("b{:?}", b);
 
