@@ -25,6 +25,7 @@ pub fn exec() {
 pub fn frog_dp(arr: &mut Vec<i32>) -> i32 {
 
     // solve frog problem by DP.
+    // dp[i]: min cost for ith stage.
     
     let mut dp = vec![INF; N];
     
