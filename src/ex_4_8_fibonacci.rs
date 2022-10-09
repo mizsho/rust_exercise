@@ -1,6 +1,6 @@
 
 use proconio::input;
-use std::time::{Duration, Instant};
+use std::time::Instant;
 
 pub fn exec() {
 
@@ -9,17 +9,27 @@ pub fn exec() {
     // fib(1) = 1
     // fib(n) = fib(n-1) + fib(n-2)
 
+    println!("Calc fibonacci sequence.");
     println!("Input a number n (0~50). Larger number will cause overflow.");
     input! {
         n: u8,
     }
 
+    // (1) recursive version
+
     let start = Instant::now();
 
-    // (1) recursive version
-    // println!("fib({}) = {}", n, fib_recursive(n));
+    println!("Recursive version");
+    println!("fib({}) = {}", n, fib_recursive(n));
+
+    let duration = start.elapsed();
+    println!("elapsed time: {:#?}", duration);
 
     // (2) memo version
+
+    let start = Instant::now();
+
+    println!("memo version");
     println!("fib({}) = {}", n, fib_cache_exec(n));
 
     let duration = start.elapsed();
