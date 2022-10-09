@@ -1,18 +1,8 @@
 
-// mod exhaustive_search;
-// mod gcd;
-// mod fibonacci;
-// mod frog_problem;
-// mod knapsack_problem;
-mod edit_distance;
+mod ex_3_1_exhaustive_search;
 
 fn main() {
 
-    // exhaustive_search::exhaustive_search();
-    // gcd::exec();
-    // fibonacci::exec();
-    // frog_problem::exec();
-    // knapsack_problem::exec();
-    edit_distance::exec();
+    ex_3_1_exhaustive_search::exhaustive_search();
 
 }
