@@ -19,7 +19,7 @@ pub fn exec() {
     let mut left = 0;
     let mut right = n - 1;
     while left <= right {
-        let mut mid = (left + right) / 2;
+        let mid = (left + right) / 2;
         if a[mid as usize]==k {
             println!("anwer: {}", mid);
             break
