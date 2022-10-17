@@ -10,6 +10,7 @@ pub fn exec() {
     // (3) insert (a letter in string s)
     // "insert" is equivalent as "delete" a letter of string t.
 
+    println!("Calc the edit distance between two strings.");
     println!("input two strings:");
     input! {
         s: String,
