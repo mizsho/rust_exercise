@@ -5,10 +5,10 @@ pub fn exec() {
 
     // Calc the edit distance between two Strings s,t.
     // The following edit operations are allowed:
-    // (1) change (a letter of s)
-    // (2) delete (a letter of s)
-    // (3) insert (a letter in s)
-    // Insert is equivalent as delete a letter of t.
+    // (1) change (a letter of string s)
+    // (2) delete (a letter of string s)
+    // (3) insert (a letter in string s)
+    // "insert" is equivalent as "delete" a letter of string t.
 
     println!("input two strings:");
     input! {
@@ -17,7 +17,7 @@ pub fn exec() {
     }
 
     // dp[i][j]: the edit distance of
-    // first i letters of s and first j letters of t.
+    // first i letters of string s and first j letters of string t.
     const INF: usize = 10000;
     let mut dp = vec![
         vec![INF; t.len()+1];
@@ -31,7 +31,7 @@ pub fn exec() {
         for j in 0..=t.len() {
             // (1) change
             if (i > 0) && (j > 0) {
-                // index should be i-1 to pick ith char.
+                // To pick ith char, use i-1. 
                 if s.chars().nth(i-1) != t.chars().nth(j-1) {
                     let b = dp[i-1][j-1] + 1;
                     chmin(&mut dp[i][j], b);
@@ -61,7 +61,7 @@ pub fn exec() {
 
 fn chmin(a: &mut usize, b: usize) {
 
-    // choose minimum value function for DP.
+    // choose min value.
     // a: vector element (mutable reference)
     // b: reference number
     
