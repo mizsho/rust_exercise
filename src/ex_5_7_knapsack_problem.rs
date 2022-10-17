@@ -17,14 +17,17 @@ pub fn exec() {
 
     let mut arr_w = vec![0usize; N];
     let mut arr_v = vec![0usize; N];
+
     for i in 0..N {
         arr_w[i] = rand::thread_rng().gen_range(1..=100);
         arr_v[i] = rand::thread_rng().gen_range(1..=100);
     }
+
+    println!("Knapsack problem.");
     println!("weight array: {:?}", arr_w);
     println!("value array: {:?}", arr_v);
 
-    // dp[i][w]: the max of total value under under the condition:
+    // dp[i][w]: the max of total value under the following condition:
     //  - total weight <= w
     //  - pick first i items
     let mut dp = vec![
@@ -51,7 +54,7 @@ pub fn exec() {
 
 fn chmax(a: &mut usize, b: usize) {
 
-    // choose maximum value function for DP.
+    // choose max value.
     // a: vector element (mutable reference)
     // b: reference number
 
